@@ -1,0 +1,125 @@
+main{
+    width: 80%;
+    margin: 0 auto
+}
+@media (max-width: 500px) {
+    main {
+        width: 96%;
+    }
+}
+#map {
+    height: 90%;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #map-section {
+    height: 60%;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+body {
+    height: 100%;
+    margin: 0 ;
+    padding: 0;
+  }
+
+header {
+    background-color: rgb(100, 27, 245); 
+    text-align: right; 
+    padding-right: 1rem;
+    padding-top: 0.25rem;
+}
+
+header > img {
+    height: 25px ;
+}
+
+#page-title{
+    text-align: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.my-courses{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 1rem;
+}
+.feedback{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.comments{
+    margin-top: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.buttons{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.courses-box{
+    border: 2px solid gray;
+    border-radius: 15px;
+    padding: 1rem;
+}
+.feedback-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.loading-bar{
+    display: block;
+    margin: auto;
+    height: 35px;
+}
+.stars{
+    height:30px;
+}
+.menu-button {
+    border-radius: 0.4rem;
+    padding: 0 1.2rem;
+    height: 2rem;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgb(193, 193, 193);
+}
+.btn-action {
+    border-radius: 0.4rem;
+    padding: 0 1.2rem;
+    height: 2rem;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid rgb(193, 193, 193);
+}
+section > form > div > label {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+section > form > div > input {
+    height: 2rem;
+    width: 40%;
+}
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#button,#button1{
+    color: rgb(147, 26, 171);
+}
