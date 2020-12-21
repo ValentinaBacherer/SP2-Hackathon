@@ -45,7 +45,8 @@ initMap = function () {
   // Dinamic data 
   const UsersSection = document.getElementById("my-users");
   UsersSection.innerHTML = "";
-  fetch('http://localhost:8080/users-location')
+  // fetch('http://localhost:8080/users-location')
+  fetch('https://tranquil-chamber-22729.herokuapp.com/users-location')
     .then(response => response.json())
     .then((data) => {
       data.forEach((user) => {
