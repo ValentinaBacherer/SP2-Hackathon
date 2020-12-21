@@ -1,5 +1,5 @@
 const express = require("express");
-const port = 8080;
+const PORT = process.env.PORT || 8080;
 const serverInstance = express();
 const moduleUsers = require("./usersService.js");
 
@@ -11,8 +11,8 @@ serverInstance.get('/users-location', (req,res) => {
     res.json(moduleUsers.usersList);
 })
 
-serverInstance.listen(port, () => {
-    console.log(`Server started on: http://localhost:${port}`);
+serverInstance.listen(PORT, () => {
+    console.log(`Server started on: http://localhost:${PORT}`);
 })
 
 // REST API
