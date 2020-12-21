@@ -16,6 +16,7 @@ Construir una aplicacion web que permita ver en un mapa, las ubicaciones y fotos
    - Código
 
 1. Crear un mapa usando [google maps API](https://developers.google.com/maps/documentation/javascript/overview#maps_map_simple-html)
+Languaje: https://developers.google.com/maps/documentation/javascript/localization#Region
 
    - El mapa debe mostrar la ubicación de cada usuario usando la imagen de GitHub
    - Al Hacer click en el marcador del usuario debe mostrar un detalle (toda la información) del usuario seleccionado
