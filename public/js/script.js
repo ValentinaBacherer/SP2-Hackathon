@@ -46,7 +46,7 @@ initMap = function () {
   const UsersSection = document.getElementById("my-users");
   UsersSection.innerHTML = "";
   // fetch('http://localhost:8080/users-location')
-  fetch('https://tranquil-chamber-22729.herokuapp.com/users-location')
+  fetch('/users-location')
     .then(response => response.json())
     .then((data) => {
       data.forEach((user) => {
