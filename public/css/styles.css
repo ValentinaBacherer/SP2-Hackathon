@@ -1,5 +1,6 @@
 main{
-    width: 80%;
+    height: 100%;
+    width: 90%;
     margin: 0 auto
 }
 @media (max-width: 500px) {
@@ -12,7 +13,7 @@ main{
     width: 90%;
     margin: 0 auto;
   }
-  #map-section {
+#map-section {
     height: 60%;
     width: 80%;
     margin: 0 auto;
@@ -34,9 +35,44 @@ header {
     text-align: right; 
     padding-right: 1rem;
     padding-top: 0.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
 }
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-header > img {
+  
+#navbar a{
+    display: block;
+    padding: 0rem 0.5rem;
+  }
+#navbar a:hover{
+    color:white;
+  }
+
+ul {
+    list-style: none;
+  }
+  
+a {
+    text-decoration: none;
+    color: black;
+  }
+h3{
+    text-align: center;
+}
+#logo {
     height: 25px ;
 }
 
@@ -46,10 +82,8 @@ header > img {
     margin-right: 1rem;
 }
 
-.my-courses{
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+.my-users{
+    margin: 1rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-gap: 1rem;
@@ -72,8 +106,8 @@ header > img {
 
 .courses-box{
     border: 2px solid gray;
-    border-radius: 15px;
-    padding: 1rem;
+    border-radius: 25px;
+    padding: 0.5rem;
 }
 .feedback-item{
     display: flex;
@@ -123,3 +157,8 @@ section > form > div > input {
 #button,#button1{
     color: rgb(147, 26, 171);
 }
+#video-section {
+    display: flex;
+    justify-content: center;
+    
+  }

@@ -2,8 +2,9 @@ const express = require("express");
 const port = 8080;
 const serverInstance = express();
 const moduleUsers = require("./usersService.js");
+
 serverInstance.use(express.static('public'));
-console.log(moduleUsers.usersList);
+// console.log(moduleUsers.usersList);
 
 
 serverInstance.get('/users-location', (req,res) => {
@@ -11,7 +12,7 @@ serverInstance.get('/users-location', (req,res) => {
 })
 
 serverInstance.listen(port, () => {
-    console.log(`Server on: http://localhost:${port}`);
+    console.log(`Server started on: http://localhost:${port}`);
 })
 
 // REST API
