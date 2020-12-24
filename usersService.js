@@ -61,6 +61,16 @@ const users = [
     }
 ];
 
+function usersFilter(user) {
+    if (user !== null ){
+        const result = users.filter(user => user.name.toLowerCase() === user);
+        if (result.length > 0) {
+            return result;
+        } 
+    };
+};
+
 module.exports = {
     usersList : users,
+    usersFilter,
 }

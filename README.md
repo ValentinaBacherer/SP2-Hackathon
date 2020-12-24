@@ -37,3 +37,9 @@ Languaje: https://developers.google.com/maps/documentation/javascript/localizati
 
 ## Bugs
 1. Relative url for endpoint : https://stackoverflow.com/questions/2005079/absolute-vs-relative-urls/2005097#2005097
+
+
+## Preguntas
+1. Para hacer la consulta del nombre desde el navegador, quien tiene 
+que verificar el formato del input? y quien que la respuesta no sea vacia?
+o que tenga algun otro error?

@@ -7,9 +7,20 @@ serverInstance.use(express.static('public'));
 // console.log(moduleUsers.usersList);
 
 
-serverInstance.get('/users-location', (req,res) => {
+serverInstance.get('/users-location', (req, res) => {
     res.json(moduleUsers.usersList);
-})
+});
+
+serverInstance.get('/users-location1', (req, res) => {
+    res.json(moduleUsers.usersList);
+});
+
+serverInstance.get('/users-location/:name', (req, res) => {
+    const filterName = req.params.name;
+    console.log('Adentro', filterName);
+    // usersListFunc = moduleUsers.usersFilter(filterName);
+    res.json(moduleUsers.usersList);
+});
 
 serverInstance.listen(PORT, () => {
     console.log(`Server started on: http://localhost:${PORT}`);
