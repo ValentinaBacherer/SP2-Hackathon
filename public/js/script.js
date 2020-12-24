@@ -52,7 +52,7 @@ initMap = function () {
       data.forEach((user) => {
         // console.log(user);
         const userDiv = document.createElement("div");
-        const userName = document.createElement("h3");
+        const userName = document.createElement("h4");
         userName.innerHTML = user.name;
         const userImage = document.createElement("img");
         userImage.src = `https://github.com/${user.githubUser}.png?size=64px`;

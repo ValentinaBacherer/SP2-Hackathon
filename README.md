@@ -34,3 +34,6 @@ Languaje: https://developers.google.com/maps/documentation/javascript/localizati
 
 <img src="map-wireframe.png" width="900" style="padding: 3rem; margin: 0 auto"/>
 <img src="video-wireframe.png" width="900" style="padding: 3rem; margin: 0 auto"/>
+
+## Bugs
+1. Relative url for endpoint : https://stackoverflow.com/questions/2005079/absolute-vs-relative-urls/2005097#2005097

@@ -16,6 +16,8 @@ serverInstance.listen(PORT, () => {
 })
 
 // REST API
+// Representational state transfer (REST) is a software architectural style 
+// that defines a set of constraints to be used for creating Web services
 // Leer el recurso
 // GET /users-location
 
