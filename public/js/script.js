@@ -2,16 +2,10 @@
 let adaMap;
 let markerPlace = { lat: -13.024630, lng: -71.551810, };
 
-initMap = function () {
-
-  adaMap = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: 10, lng: -75 },
-    zoom: 2,
-  });
-
+function createStaticMarker(markerName) {
   // Static data Marker
-  const markerPlace = { lat: -13.024630, lng: -71.551810, };
-  const testUserName = "Camila";
+  markerPlace = { lat: -13.024630, lng: -71.551810, };
+  const testUserName = markerName;
   const imageSpecs = {
     url: "https://github.com/sancarbar.png?size=64",
     size: new google.maps.Size(64, 64),
@@ -20,14 +14,10 @@ initMap = function () {
     scaledSize: new google.maps.Size(25, 25)
   };
   const contentString =
-    '<div id="content">' +
-    '<div id="siteNotice">' +
-    "</div>" +
     '<h1 id="firstHeading" class="firstHeading">Santiago</h1>' +
     '<div id="bodyContent">' +
     `<p><b>${testUserName}</b> is a mentor at ADA School. ` +
     "This is static info.</p>" +
-    "</div>" +
     "</div>";
   const infowindow = new google.maps.InfoWindow({
     content: contentString,
@@ -39,14 +29,36 @@ initMap = function () {
     label: testUserName,
     icon: imageSpecs,
   });
+
   marker.addListener("click", () => {
     infowindow.open(adaMap, marker);
   });
+}
 
-  // Dinamic data 
+initEmptyMap = function () {
+
+  adaMap = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 10, lng: -75 },
+    zoom: 2,
+  });
+  // createStaticMarker("Juanita");
+  // CreateUsersMarkers("/users-location");
+};
+
+initMapAllUsers = function () {
+  adaMap = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 10, lng: -75 },
+    zoom: 2,
+  });
+  createStaticMarker("Juanita");
+  createUsersMarkers("/users-location");
+};
+
+function createUsersMarkers (endPointCall) {
   const UsersSection = document.getElementById("my-users");
   UsersSection.innerHTML = "";
-  fetch('/users-location')
+  const endPoint = endPointCall;
+  fetch(endPoint)
     .then(response => response.json())
     .then((data) => {
       data.forEach((user) => {
@@ -76,8 +88,7 @@ initMap = function () {
           '<div id="bodyContent">' +
           `<p><b>${user.name}</b> is a ${user.role} at ADA School.</p>` +
           `<p>GitHub: ${user.githubUser}, <a href="` + `https://github.com/${user.githubUser}">` +
-          "link</a>" +
-          ".</p>" +
+          "link</a>" + ".</p>" +
           "</div>";
         const userInfoWindow = new google.maps.InfoWindow({
           content: usercontentString,
@@ -96,5 +107,15 @@ initMap = function () {
       });
     }
     );
-  // End dinamic data
 };
+
+function Init() {
+  
+};
+
+Init();
+
+
+
+
+
