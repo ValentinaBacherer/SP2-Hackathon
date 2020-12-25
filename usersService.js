@@ -43,8 +43,8 @@ const users = [
         name:"Carolina",
         githubUser:"Kharolina",
         location:{
-            lat:-74.0817500,
-            lng:4.6097100,
+            lat:16.533270,
+            lng:-60.811722,
         },
         role:"developer",
         code:"13345"

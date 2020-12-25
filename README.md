@@ -43,3 +43,7 @@ Languaje: https://developers.google.com/maps/documentation/javascript/localizati
 1. Para hacer la consulta del nombre desde el navegador, quien tiene 
 que verificar el formato del input? y quien que la respuesta no sea vacia?
 o que tenga algun otro error?
+
+## Heroku
+1. git heroku push main
+2. https://tranquil-chamber-22729.herokuapp.com
