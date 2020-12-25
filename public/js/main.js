@@ -8,7 +8,7 @@ function handleSubmit(event) {
     // Dinamic data 
     const UsersSection = document.getElementById("my-users");
     UsersSection.innerHTML = "";
-    fetch('/users-location')
+    fetch(queryEndpoint)
         .then(response => response.json())
         .then((data) => {
             data.forEach((user) => {

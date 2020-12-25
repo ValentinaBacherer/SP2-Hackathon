@@ -61,12 +61,14 @@ const users = [
     }
 ];
 
-function usersFilter(user) {
-    if (user !== null ){
-        const result = users.filter(user => user.name.toLowerCase() === user);
+function usersFilter(nameFilter) {
+    if (nameFilter !== null ){
+        const result = users.filter(user => user.name.toLowerCase() === nameFilter);
         if (result.length > 0) {
             return result;
-        } 
+        } else{
+            return "error";
+        }
     };
 };
 
