@@ -36,13 +36,10 @@ function createStaticMarker(markerName) {
 }
 
 initEmptyMap = function () {
-
   adaMap = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 10, lng: -75 },
     zoom: 2,
   });
-  // createStaticMarker("Juanita");
-  // CreateUsersMarkers("/users-location");
 };
 
 initMapAllUsers = function () {
@@ -55,9 +52,9 @@ initMapAllUsers = function () {
 };
 
 function createUsersMarkers (endPointCall) {
+  const endPoint = endPointCall;
   const UsersSection = document.getElementById("my-users");
   UsersSection.innerHTML = "";
-  const endPoint = endPointCall;
   fetch(endPoint)
     .then(response => response.json())
     .then((data) => {
@@ -110,7 +107,8 @@ function createUsersMarkers (endPointCall) {
 };
 
 function Init() {
-  
+  // Nothing  is running automatically from here, 
+  // Only initMapAllUsers desde index.html
 };
 
 Init();

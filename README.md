@@ -40,9 +40,13 @@ Languaje: https://developers.google.com/maps/documentation/javascript/localizati
 
 ## Preguntas
 1. Para hacer la consulta del nombre desde el navegador, quien tiene 
-que verificar el formato del input? y quien que la respuesta no sea vacia?
-o que tenga algun otro error?
-2. 
+que verificar/prevenir errores?
+ * formato del input: mayusculas, minúsculas, números
+ * formato de la respuesta: si la respuesta es vacia? que devuelve ? que pasa en la pantalla?
+ * implementacion, como hacer para poder escribir solo caracteres iniciales?
+ * 
+ 
+2. Diferentes formas de declarar una funcion en script.js, cual diferencia? puede haber una mejor?
 
 ## Heroku
 1. git heroku push main
