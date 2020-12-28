@@ -4,8 +4,6 @@ const serverInstance = express();
 const moduleUsers = require("./usersService.js");
 
 serverInstance.use(express.static('public'));
-// console.log(moduleUsers.usersList);
-
 
 serverInstance.get('/users-location', (req, res) => {
     res.json(moduleUsers.usersList);
@@ -13,9 +11,7 @@ serverInstance.get('/users-location', (req, res) => {
 
 serverInstance.get('/users-location/:name', (req, res) => {
     const filterName = req.params.name;
-    usersListFunc = moduleUsers.usersFilter(filterName);
-    console.log(usersListFunc);
-    res.json(usersListFunc);
+    res.json(moduleUsers.usersList);
 });
 
 serverInstance.listen(PORT, () => {
