@@ -11,7 +11,7 @@ serverInstance.get('/users-location', (req, res) => {
 
 serverInstance.get('/users-location/:name', (req, res) => {
     const filterName = req.params.name;
-    res.json(moduleUsers.usersList);
+    res.json(moduleUsers.usersFilter(filterName));
 });
 
 serverInstance.listen(PORT, () => {
