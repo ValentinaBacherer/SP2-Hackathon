@@ -61,16 +61,9 @@ const users = [
     }
 ];
 
-function usersFilter(nameFilter) {
-    if (nameFilter !== null ){
-        const result = users.filter(user => user.name.toLowerCase() === nameFilter);
-        if (result.length > 0) {
-            return result;
-        } else{
-            return "error";
-        }
-    };
-};
+
+const usersFilter = nameFilter => users.filter(user => user.name.toLowerCase().includes(nameFilter));
+    
 
 module.exports = {
     usersList : users,
